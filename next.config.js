@@ -6,10 +6,9 @@ const nextConfig = {
       "scontent.cdninstagram.com",
       "instagram.fxyz1-1.fna.fbcdn.net",
       "scontent-gig4-1.cdninstagram.com",
-      "scontent.cdninstagram.com",
-      // outros domínios se necessário
+      "scontent.xx.fbcdn.net",
+      // Adicione outros domínios que apareçam nas URLs das imagens, se necessário!
     ],
-    // remotePatterns: [ ... ] // você pode usar isso no lugar de domains para domínios dinâmicos ou subdomínios
   },
 };
 
