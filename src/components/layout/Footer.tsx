@@ -69,7 +69,6 @@ const Footer = () => {
                   className="text-white hover:text-secondary transition-colors"
                   aria-label="TikTok"
                 >
-                  {/* Se quiser um ícone do TikTok, use SVG ou lucide-react se disponível */}
                   <span className="sr-only">TikTok</span>
                   TikTok
                 </a>
