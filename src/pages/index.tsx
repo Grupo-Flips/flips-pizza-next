@@ -2,9 +2,17 @@ import Head from "next/head";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
+type InstagramPhoto = {
+  id: string;
+  media_type: string;
+  media_url: string;
+  permalink: string;
+  caption?: string;
+};
+
 export default function Home() {
   // Instagram feed dinâmico
-  const [photos, setPhotos] = useState<any[]>([]);
+  const [photos, setPhotos] = useState<InstagramPhoto[]>([]);
   useEffect(() => {
     fetch("/api/instagram")
       .then(res => res.json())
@@ -14,15 +22,15 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Flip's Pizza — Tradição e Frescor em Cada Mordida</title>
-        <meta name="description" content="Flip's Pizza — Pizzas artesanais de fermentação longa em Nova Iguaçu. Peça já pelo iFood!" />
+        <title>Flip&apos;s Pizza &mdash; Tradição e Frescor em Cada Mordida</title>
+        <meta name="description" content="Flip&apos;s Pizza — Pizzas artesanais de fermentação longa em Nova Iguaçu. Peça já pelo iFood!" />
       </Head>
       <main className="flex flex-col">
         {/* HERO */}
         <section className="relative min-h-[70vh] bg-amber-50 flex items-center justify-center overflow-hidden">
           <Image
             src="/hero.png"
-            alt="Pizza Flip's artesanal"
+            alt="Pizza Flip&apos;s artesanal"
             fill
             priority
             className="object-cover object-center z-0"
@@ -117,7 +125,7 @@ export default function Home() {
         {/* EXPERIÊNCIA FLIP’S */}
         <section className="py-16 bg-maroon text-white">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">A Experiência Flip's</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">A Experiência Flip&apos;s</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
               {[
                 { title: "Ingredientes Frescos", text: "Selecionamos apenas os melhores ingredientes para nossas pizzas artesanais." },
@@ -181,7 +189,7 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">Nossa História</h2>
             <div className="max-w-3xl mx-auto text-center text-lg text-gray-700">
               <p>
-                A Flip’s Pizza nasceu da paixão pela verdadeira pizza artesanal de fermentação longa.
+                A Flip&apos;s Pizza nasceu da paixão pela verdadeira pizza artesanal de fermentação longa.
                 Nosso fundador, Felipe, trouxe para Nova Iguaçu um novo conceito de sabor, combinando ingredientes frescos, técnicas tradicionais de Nova York e inovação em cada receita.
               </p>
               <p className="mt-4">
@@ -207,9 +215,11 @@ export default function Home() {
                       rel="noopener noreferrer"
                       className="block aspect-square overflow-hidden rounded-lg"
                     >
-                      <img
+                      <Image
                         src={photo.media_url}
-                        alt={photo.caption || "Instagram Flip's Pizza"}
+                        alt={photo.caption || "Instagram Flip&apos;s Pizza"}
+                        width={300}
+                        height={300}
                         className="w-full h-full object-cover"
                       />
                     </a>
