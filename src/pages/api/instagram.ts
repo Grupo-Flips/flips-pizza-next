@@ -19,7 +19,7 @@ export default async function handler(
 
     res.status(200).json(data.data || []);
   } catch (error) {
-    // Agora o error é usado no log
+    // Usando a variável error para não dar erro no ESLint
     console.error("Erro ao buscar imagens do Instagram:", error);
     res.status(500).json({ error: 'Erro ao buscar imagens do Instagram' });
   }
