@@ -1,4 +1,5 @@
-import { Phone, Mail, Clock, MapPin, Instagram } from 'lucide-react';
+import Image from "next/image";
+import { Phone, Mail, Clock, MapPin, Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -7,9 +8,16 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Logo e Slogan */}
           <div className="flex flex-col items-center md:items-start">
-            <img src="/logo.png" alt="Flip's Pizza" className="h-16 w-auto mb-4" />
+            <Image
+              src="/logo.png"
+              alt="Flip&apos;s Pizza"
+              width={96}
+              height={64}
+              className="h-16 w-auto mb-4"
+              priority
+            />
             <p className="text-lg font-serif italic">
-              "Tradição e Frescor em Cada Mordida"
+              &quot;Tradição e Frescor em Cada Mordida&quot;
             </p>
           </div>
 
@@ -50,6 +58,7 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white hover:text-secondary transition-colors"
+                  aria-label="Instagram"
                 >
                   <Instagram size={24} />
                 </a>
@@ -58,7 +67,10 @@ const Footer = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white hover:text-secondary transition-colors"
+                  aria-label="TikTok"
                 >
+                  {/* Se quiser um ícone do TikTok, use SVG ou lucide-react se disponível */}
+                  <span className="sr-only">TikTok</span>
                   TikTok
                 </a>
               </div>
@@ -68,7 +80,9 @@ const Footer = () => {
 
         {/* Direitos Autorais */}
         <div className="border-t border-white/20 mt-8 pt-6 text-center">
-          <p>© 2025 Flip's Pizza. Todos os direitos reservados.</p>
+          <p>
+            &copy; 2025 Flip&apos;s Pizza. Todos os direitos reservados.
+          </p>
         </div>
       </div>
     </footer>
