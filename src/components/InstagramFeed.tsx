@@ -51,7 +51,6 @@ export default function InstagramFeed() {
                   sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
                   className="object-cover"
                   priority={false}
-                  unoptimized // REMOVA após garantir todos os domínios no next.config.js
                 />
               </div>
             </a>
