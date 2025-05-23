@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Phone, Mail, Clock, MapPin, Instagram } from "lucide-react";
 
 const Footer = () => {
@@ -10,7 +11,7 @@ const Footer = () => {
           <div className="flex flex-col items-center md:items-start">
             <Image
               src="/logo.png"
-              alt="Flip&apos;s Pizza"
+              alt="Flip's Pizza"
               width={96}
               height={64}
               className="h-16 w-auto mb-4"
@@ -25,10 +26,10 @@ const Footer = () => {
           <div className="flex flex-col items-center md:items-start">
             <h3 className="text-xl font-bold mb-4">Menu Rápido</h3>
             <div className="flex flex-col space-y-2">
-              <a href="/cardapio" className="hover:text-secondary transition-colors">Cardápio</a>
-              <a href="/promocoes" className="hover:text-secondary transition-colors">Promoções</a>
-              <a href="/contato" className="hover:text-secondary transition-colors">Contato</a>
-              <a href="/privacidade" className="hover:text-secondary transition-colors">Política de Privacidade</a>
+              <Link href="/cardapio" className="hover:text-secondary transition-colors">Cardápio</Link>
+              <Link href="/promocoes" className="hover:text-secondary transition-colors">Promoções</Link>
+              <Link href="/contato" className="hover:text-secondary transition-colors">Contato</Link>
+              <Link href="/privacidade" className="hover:text-secondary transition-colors">Política de Privacidade</Link>
             </div>
           </div>
 

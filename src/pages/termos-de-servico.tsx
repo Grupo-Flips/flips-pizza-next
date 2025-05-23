@@ -1,13 +1,16 @@
+import Link from "next/link";
+
 const TermosDeServico = () => (
   <div className="max-w-3xl mx-auto px-4 py-16 text-gray-800">
     <h1 className="text-4xl font-serif font-bold mb-8 text-primary">Termos de Serviço</h1>
     <p className="mb-6"><strong>Última atualização:</strong> 22 de maio de 2025</p>
 
     <p className="mb-6">
-      Bem-vindo à Flip&apos;s Pizza! Estes Termos de Serviço (&quot;Termos&quot;) regulam o uso do nosso site, aplicativos e demais serviços digitais oferecidos pela Flip&apos;s Pizza.
+      Bem-vindo à Flip’s Pizza! Estes Termos de Serviço (&quot;Termos&quot;) regulam o uso do nosso site, aplicativos e demais serviços digitais oferecidos pela Flip’s Pizza.
     </p>
     <p className="mb-6">
-      Ao acessar ou utilizar nossos serviços, você concorda com estes Termos e com a nossa <a href="/privacidade" className="underline text-primary">Política de Privacidade</a>. Caso não concorde, por favor, não utilize nossos serviços.
+      Ao acessar ou utilizar nossos serviços, você concorda com estes Termos e com a nossa{" "}
+      <Link href="/privacidade" className="underline text-primary">Política de Privacidade</Link>. Caso não concorde, por favor, não utilize nossos serviços.
     </p>
 
     <h2 className="text-2xl font-bold mt-8 mb-2">1. Uso dos Serviços</h2>
@@ -17,17 +20,18 @@ const TermosDeServico = () => (
 
     <h2 className="text-2xl font-bold mt-8 mb-2">2. Cadastro e Dados Pessoais</h2>
     <p className="mb-4">
-      Alguns serviços podem exigir cadastro. Ao fornecer informações, você garante que são corretas e atualizadas. O uso e a proteção desses dados seguem nossa <a href="/privacidade" className="underline text-primary">Política de Privacidade</a>.
+      Alguns serviços podem exigir cadastro. Ao fornecer informações, você garante que são corretas e atualizadas. O uso e a proteção desses dados seguem nossa{" "}
+      <Link href="/privacidade" className="underline text-primary">Política de Privacidade</Link>.
     </p>
 
     <h2 className="text-2xl font-bold mt-8 mb-2">3. Pedidos e Pagamentos</h2>
     <p className="mb-4">
-      Os pedidos realizados pelo site ou aplicativo Flip&apos;s Pizza estão sujeitos à disponibilidade de produtos, área de entrega e formas de pagamento aceitas. Reservamo-nos o direito de recusar ou cancelar pedidos conforme nossa política interna.
+      Os pedidos realizados pelo site ou aplicativo Flip’s Pizza estão sujeitos à disponibilidade de produtos, área de entrega e formas de pagamento aceitas. Reservamo-nos o direito de recusar ou cancelar pedidos conforme nossa política interna.
     </p>
 
     <h2 className="text-2xl font-bold mt-8 mb-2">4. Propriedade Intelectual</h2>
     <p className="mb-4">
-      Todo o conteúdo do site, incluindo textos, imagens, marcas, logotipos, design e software, pertence à Flip&apos;s Pizza e é protegido por leis de direitos autorais e propriedade intelectual. É proibido copiar, reproduzir ou distribuir qualquer conteúdo sem autorização prévia.
+      Todo o conteúdo do site, incluindo textos, imagens, marcas, logotipos, design e software, pertence à Flip’s Pizza e é protegido por leis de direitos autorais e propriedade intelectual. É proibido copiar, reproduzir ou distribuir qualquer conteúdo sem autorização prévia.
     </p>
 
     <h2 className="text-2xl font-bold mt-8 mb-2">5. Links para Terceiros</h2>
@@ -53,6 +57,13 @@ const TermosDeServico = () => (
 
     <div className="mt-10 text-lg font-bold text-primary">
       Flip&apos;s Pizza – Tradição e Frescor em Cada Mordida
+    </div>
+    <div className="mt-6 text-sm">
+      Veja também nossa{" "}
+      <Link href="/privacidade" className="underline text-primary">
+        Política de Privacidade
+      </Link>
+      .
     </div>
   </div>
 );

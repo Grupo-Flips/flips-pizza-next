@@ -1,9 +1,9 @@
-const Privacidade = () => (
+import Link from "next/link";
+
+const PoliticaDePrivacidade = () => (
   <div className="max-w-3xl mx-auto px-4 py-16 text-gray-800">
     <h1 className="text-4xl font-serif font-bold mb-8 text-primary">Política de Privacidade</h1>
-    <p className="mb-6">
-      <strong>Última atualização:</strong> 23 de maio de 2025
-    </p>
+    <p className="mb-6"><strong>Última atualização:</strong> 23 de maio de 2025</p>
 
     <h2 className="text-2xl font-bold mt-8 mb-2">1. Informações Coletadas</h2>
     <p className="mb-4">
@@ -36,7 +36,7 @@ const Privacidade = () => (
 
     <h2 className="text-2xl font-bold mt-8 mb-2">6. Direitos do Usuário</h2>
     <p className="mb-4">
-      Você pode, a qualquer momento, solicitar acesso, atualização ou exclusão de seus dados pessoais, revogar consentimento para comunicações de marketing e entrar em contato pelo e-mail:&nbsp;
+      Você pode, a qualquer momento, solicitar acesso, atualização ou exclusão de seus dados pessoais, revogar consentimento para comunicações de marketing e entrar em contato pelo e-mail:{" "}
       <a href="mailto:contato@flipspizza.com.br" className="underline text-primary">contato@flipspizza.com.br</a>.
     </p>
 
@@ -47,14 +47,21 @@ const Privacidade = () => (
 
     <h2 className="text-2xl font-bold mt-8 mb-2">8. Contato</h2>
     <p className="mb-4">
-      Em caso de dúvidas ou solicitações relacionadas à privacidade, entre em contato pelo e-mail:&nbsp;
+      Em caso de dúvidas ou solicitações relacionadas à privacidade, entre em contato pelo e-mail:{" "}
       <a href="mailto:contato@flipspizza.com.br" className="underline text-primary">contato@flipspizza.com.br</a>
     </p>
 
     <div className="mt-10 text-lg font-bold text-primary">
-      Flip’s Pizza – Tradição e Frescor em Cada Mordida
+      Flip&apos;s Pizza – Tradição e Frescor em Cada Mordida
+    </div>
+    <div className="mt-6 text-sm">
+      Veja também nossos{" "}
+      <Link href="/termos-de-servico" className="underline text-primary">
+        Termos de Serviço
+      </Link>
+      .
     </div>
   </div>
 );
 
-export default Privacidade;
+export default PoliticaDePrivacidade;
