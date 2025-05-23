@@ -11,6 +11,11 @@ const nextConfig = {
         protocol: 'https',
         hostname: '**.fbcdn.net',
       },
+      {
+        protocol: 'https',
+        hostname: '**.cdninstagram.com',
+      },
+      // Adicione qualquer domínio que apareça nas URLs das imagens
     ],
   },
 };
