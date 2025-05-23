@@ -4,7 +4,7 @@ const TermosDeServico = () => (
     <p className="mb-6"><strong>Última atualização:</strong> 22 de maio de 2025</p>
 
     <p className="mb-6">
-      Bem-vindo à Flip’s Pizza! Estes Termos de Serviço ("Termos") regulam o uso do nosso site, aplicativos e demais serviços digitais oferecidos pela Flip’s Pizza.
+      Bem-vindo à Flip’s Pizza! Estes Termos de Serviço (&quot;Termos&quot;) regulam o uso do nosso site, aplicativos e demais serviços digitais oferecidos pela Flip’s Pizza.
     </p>
     <p className="mb-6">
       Ao acessar ou utilizar nossos serviços, você concorda com estes Termos e com a nossa <a href="/politica-de-privacidade" className="underline text-primary">Política de Privacidade</a>. Caso não concorde, por favor, não utilize nossos serviços.
@@ -51,7 +51,9 @@ const TermosDeServico = () => (
       <a href="mailto:contato@flipspizza.com.br" className="underline text-primary">contato@flipspizza.com.br</a>
     </p>
 
-    <div className="mt-10 text-lg font-bold text-primary">Flip’s Pizza – Tradição e Frescor em Cada Mordida</div>
+    <div className="mt-10 text-lg font-bold text-primary">
+      Flip&apos;s Pizza – Tradição e Frescor em Cada Mordida
+    </div>
   </div>
 );
 

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 type InstagramPhoto = {
   id: string;
@@ -28,11 +29,17 @@ export default function InstagramFeed() {
             rel="noopener noreferrer"
             className="block aspect-square overflow-hidden rounded-lg"
           >
-            <img
-              src={photo.media_url}
-              alt={photo.caption || "Instagram Flip's Pizza"}
-              className="w-full h-full object-cover"
-            />
+            <div className="relative w-full h-0" style={{ paddingBottom: '100%' }}>
+              <Image
+                src={photo.media_url}
+                alt={photo.caption || "Instagram Flip's Pizza"}
+                fill
+                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                className="object-cover"
+                priority={false}
+                unoptimized // Caso o domínio do Instagram não esteja na next.config.js, remova depois que adicionar
+              />
+            </div>
           </a>
         ) : null
       )}
